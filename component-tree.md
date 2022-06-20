@@ -1,13 +1,18 @@
 Component Tree
-App
+
 Home page
 Navbar
 -home button
 -search button
 
-Category
--button
--collapsible thing
+Category Bar
+State: to render which category of links to display
+-button (x number of Categories)
+
+Collapsible component (list of links)
+Props: category
+Render: List of links
+
 
 Search page
 Search
