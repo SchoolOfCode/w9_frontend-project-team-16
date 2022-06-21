@@ -1,4 +1,3 @@
-// import Navbar from "./components/Navbar";
 import CategoryBar from "../Category Bar";
 import Callapsible from "../Collapsible";
 
