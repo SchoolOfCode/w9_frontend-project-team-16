@@ -4,12 +4,18 @@
   --main-text-color: #424c55;
   --black-color: #000000;
   --hightlight-color: #c74949;
+  --hover-color: #48cae4;
+  --recouce-card-color: #e9c46a;
+}
+
+body {
+  /* background-size: 500px 300px; */
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--main-color);
 }
 
@@ -19,7 +25,7 @@ nav > button {
   color: var(--main-text-color);
   background-color: var(--bg-color);
   margin-right: 1rem;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -31,13 +37,24 @@ nav > button:hover {
   color: white;
 }
 
-.header {
+.home-container {
   margin: 2rem;
-  width: 60vw;
+}
+
+.header {
+  /* width: 60vw; */
+  background: url();
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header > h1 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .header > p {
@@ -49,9 +66,55 @@ nav > button:hover {
 .category-btn {
   display: inline-block;
   padding: 1rem;
-  border
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 10px 10px 0 0;
+  /* transform: perspective(10px) rotateX(1deg); */
+  /* margin-right: 2px; */
+  cursor: pointer;
+  font-size: 1.2rem;
+  /* transition-duration: 0.4s; */
+  /* border-radius: 10px; */
 }
 
-.Array-Methods {
-  
+.category-btn:hover {
+  background-color: var(--hover-color);
 }
+
+.links-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-auto-flow: column; */
+  width: 80vw;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  border: 3px solid var(--main-color);
+  border-radius: 0 10px 10px 10px;
+  padding: 1rem;
+}
+
+a {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  min-width: 200px;
+  background-color: var(--main-text-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+a:hover {
+  /* background-color: #f4a261; */
+  background-color: var(--hightlight-color);
+}
+
+.description {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* .category-btn-clicked {
+  background-color: var(--hightlight-color);
+} */
