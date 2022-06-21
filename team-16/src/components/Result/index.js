@@ -2,12 +2,12 @@
 
 import React from "react";
 
-export default function Result() {
+export default function Result({category, description, snippet}) {
     return(
         <React.Fragment>
-            <h3>Category</h3>
-            <p>Description of code snippet.</p>
-            <code>function hello() {"{"}console.log('hello world'){"}"}; </code>
+            <h3>{category}</h3>
+            <p>{description}</p>
+            <code>{snippet}</code>
         </React.Fragment>
     )
 }
