@@ -1,16 +1,8 @@
-import { NavLink } from "react-router-dom";
-
-export default function Navbar() {
+export default function Navbar({ setActivePage }) {
   return (
-    <div>
-      <nav>
-        <NavLink className="home-page" to="/">
-          Home
-        </NavLink>
-        <NavLink className="search-page" to="/search">
-          Search
-        </NavLink>
-      </nav>
-    </div>
+    <>
+      <button onClick={() => setActivePage("Homepage")}>Home</button>
+      <button onClick={() => setActivePage("Searchpage")}>Search</button>
+    </>
   );
 }

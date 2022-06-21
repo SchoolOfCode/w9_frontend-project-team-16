@@ -1,4 +1,4 @@
-export default function Callapsible({ resourceLinks }) {
+export default function Collapsible({ resourceLinks }) {
   return (
     <div>
       {resourceLinks.map((resource) => (

@@ -1,12 +1,14 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import CategoryBar from "./components/Category Bar";
-import Callapsible from "./components/Collapsible";
+
 import { useState } from "react";
+import Homepage from "./components/Homepage";
+import Searchpage from "./components/Searchpage";
+import Navbar from "./components/Navbar";
 
 function App() {
   const categories = ["Array Methods", "React", "General"];
   const [activeCategory, setActiveCategory] = useState("Array Methods");
+  const [activePage, setActivePage] = useState("Homepage");
 
   const resourceLinks = [
     {
@@ -59,14 +61,14 @@ function App() {
 
   return (
     <>
-      <h1>School of Code Revision</h1>
-      <p>
-        View the links below to external resources or switch over to the "search
-        tab" to find some specific code snippets
-      </p>
-      {/* <Navbar /> */}
-      <CategoryBar categories={categories} handleToggle={handleToggle} />
-      <Callapsible resourceLinks={activeContent} />
+      <Navbar setActivePage={setActivePage} />
+      <Homepage
+        categories={categories}
+        handleToggle={handleToggle}
+        activeContent={activeContent}
+        activePage={activePage}
+      />
+      <Searchpage activePage={activePage} />
     </>
   );
 }
