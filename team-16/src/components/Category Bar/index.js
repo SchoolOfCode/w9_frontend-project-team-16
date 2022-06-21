@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function CategoryBar({ categories, handleToggle }) {
+export default function CategoryBar({
+  categories,
+  activeCategory,
+  handleToggle,
+}) {
   const [isClicked, setIsClicked] = useState(false);
 
   function activeButton() {
@@ -9,7 +13,7 @@ export default function CategoryBar({ categories, handleToggle }) {
 
   return categories.map((category) => (
     <button
-      className="category-btn"
+      className={`category-btn ${category === activeCategory ? "active" : ""}`}
       onClick={() => {
         handleToggle(category);
         // activeButton();

@@ -38,6 +38,7 @@ function App() {
         handleToggle={handleToggle}
         activeContent={activeContent}
         activePage={activePage}
+        activeCategory={activeCategory}
       />
       <Searchpage activePage={activePage} />
     </>

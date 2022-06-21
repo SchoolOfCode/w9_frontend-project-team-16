@@ -3,6 +3,7 @@ import Callapsible from "../Collapsible";
 
 export default function Homepage({
   categories,
+  activeCategory,
   handleToggle,
   activeContent,
   activePage,
@@ -18,7 +19,11 @@ export default function Homepage({
           </p>
         </div>
         {/* <Navbar /> */}
-        <CategoryBar categories={categories} handleToggle={handleToggle} />
+        <CategoryBar
+          categories={categories}
+          activeCategory={activeCategory}
+          handleToggle={handleToggle}
+        />
         <Callapsible resourceLinks={activeContent} />
       </div>
     );
