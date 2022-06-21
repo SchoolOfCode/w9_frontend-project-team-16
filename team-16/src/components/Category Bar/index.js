@@ -11,16 +11,22 @@ export default function CategoryBar({
     setIsClicked(!isClicked);
   }
 
-  return categories.map((category) => (
-    <button
-      className={`category-btn ${category === activeCategory ? "active" : ""}`}
-      onClick={() => {
-        handleToggle(category);
-        // activeButton();
-      }}
-      key={category}
-    >
-      {category}
-    </button>
-  ));
+  return (
+    <div>
+      {categories.map((category) => (
+        <button
+          className={`category-btn ${
+            category === activeCategory ? "active" : ""
+          }`}
+          onClick={() => {
+            handleToggle(category);
+            // activeButton();
+          }}
+          key={category}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+  );
 }

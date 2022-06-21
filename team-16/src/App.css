@@ -4,12 +4,13 @@
   --main-text-color: #424c55;
   --black-color: #000000;
   --hightlight-color: #c74949;
-  --hover-color: #48cae4;
-  --recouce-card-color: #e9c46a;
+  --hover-color: #79cbdc;
 }
 
-body {
-  /* background-size: 500px 300px; */
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -38,19 +39,15 @@ nav > button:hover {
 }
 
 .home-container {
-  margin: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
+  margin: 2rem 0 5rem 0;
   /* width: 60vw; */
-  background: url();
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .header > h1 {
@@ -65,16 +62,13 @@ nav > button:hover {
 
 .category-btn {
   display: inline-block;
-  padding: 1rem;
+  padding: 1rem 2rem;
   color: var(--black-color);
+  background-color: var(--hover-color);
   border: none;
   border-radius: 10px 10px 0 0;
-  /* transform: perspective(10px) rotateX(1deg); */
-  /* margin-right: 2px; */
   cursor: pointer;
   font-size: 1.2rem;
-  /* transition-duration: 0.4s; */
-  /* border-radius: 10px; */
 }
 
 .category-btn.active {
@@ -83,19 +77,18 @@ nav > button:hover {
 }
 
 .category-btn:hover {
-  background-color: var(--hover-color);
+  color: var(--bg-color);
+  background-color: var(--main-color);
 }
 
 .links-container {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-auto-flow: column; */
-  width: 80vw;
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
-  border: 3px solid var(--main-color);
-  border-radius: 0 10px 10px 10px;
-  padding: 1rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  background-color: var(--main-color);
+  padding: 2rem 1rem;
 }
 
 a {
@@ -110,15 +103,15 @@ a {
 }
 
 a:hover {
-  /* background-color: #f4a261; */
   background-color: var(--hightlight-color);
 }
 
 .description {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-/* .category-btn-clicked {
-  background-color: var(--hightlight-color);
-} */
+.contributor {
+  line-height: 1.8rem;
+}
