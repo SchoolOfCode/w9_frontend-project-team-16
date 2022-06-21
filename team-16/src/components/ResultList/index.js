@@ -5,12 +5,20 @@
 import Result from "../Result";
 
 export default function ResultList({results}) {
+    console.log(results)
     return(
         <ul>
-            {results.map((result) => {
-                return <Result key={result.id} category={result.category} description={result.description} snippet={result.snippet}/>
-            })}
-            
+            {results === "No results found" 
+            ? <p>{results}</p>
+            : results.map((result) => {
+                    return <Result 
+                    key={result.id}
+                    category={result.category}
+                    description={result.description}
+                    snippet={result.snippet}/>
+                    }
+                )
+            }
         </ul>
     )
 }
