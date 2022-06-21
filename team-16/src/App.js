@@ -9,6 +9,7 @@ function App() {
   const categories = ["Array Methods", "React", "General"];
   const [activeCategory, setActiveCategory] = useState("Array Methods");
   const [activePage, setActivePage] = useState("Homepage");
+
   const [resourceLinks, setResourceLinks] = useState([]);
 
   useEffect(() => {

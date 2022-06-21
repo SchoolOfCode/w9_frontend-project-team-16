@@ -9,12 +9,14 @@ export default function Homepage({
 }) {
   if (activePage === "Homepage") {
     return (
-      <div className="header">
-        <h1>School of Code Revision</h1>
-        <p>
-          View the links below to external resources or switch over to the
-          "search tab" to find some specific code snippets
-        </p>
+      <div className="home-container">
+        <div className="header">
+          <h1>School of Code Revision</h1>
+          <p>
+            View the links below to external resources or switch over to the
+            "search tab" to find some specific code snippets
+          </p>
+        </div>
         {/* <Navbar /> */}
         <CategoryBar categories={categories} handleToggle={handleToggle} />
         <Callapsible resourceLinks={activeContent} />
