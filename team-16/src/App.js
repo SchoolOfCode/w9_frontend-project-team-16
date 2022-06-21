@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Homepage from "./components/Homepage";
 import Searchpage from "./components/Searchpage";
 import Navbar from "./components/Navbar";
@@ -9,46 +9,16 @@ function App() {
   const categories = ["Array Methods", "React", "General"];
   const [activeCategory, setActiveCategory] = useState("Array Methods");
   const [activePage, setActivePage] = useState("Homepage");
+  const [resourceLinks, setResourceLinks] = useState([]);
 
-  const resourceLinks = [
-    {
-      category: "Array Methods",
-      link: "https://lodash.com/",
-      description: "Powerful Library for working with arrays",
-      contributor: "Christophe Charbonneau-Freeston",
-    },
-    {
-      category: "React",
-      link: "https://beta.reactjs.org/learn",
-      description: "React Beta Docs",
-      contributor: "Lecture",
-    },
-    {
-      category: "React",
-      link: "https://react-icons.github.io/react-icons/",
-      description:
-        "React Icon library which includes many cool things like Font Awesome",
-      contributor: "Helena Archer",
-    },
-    {
-      category: "React",
-      link: "https://www.developerway.com/posts/react-key-attribute",
-      description: "Best and bad practices for keys",
-      contributor: "Brycen Barron-Borden",
-    },
-    {
-      category: "React",
-      link: "https://www.youtube.com/watch?v=4pO-HcG2igk",
-      description: "useState Hook",
-      contributor: "Arshi Sheikh",
-    },
-    {
-      category: "General",
-      link: "https://www.youtube.com/watch?v=4pO-HcG2igk",
-      description: "useState Hook",
-      contributor: "Arshi Sheikh",
-    },
-  ];
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(`http://localhost:5001/links`);
+      const responseJSON = await response.json();
+      setResourceLinks(responseJSON.payload);
+    }
+    fetchData();
+  }, []);
 
   const handleToggle = (category) => {
     console.log(category);
