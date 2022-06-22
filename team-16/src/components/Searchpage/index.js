@@ -1,30 +1,35 @@
-import SearchInput from '../SearchInput/index.js';
-import ResultList from '../ResultList/index.js';
-import { useReducer } from 'react';
+import SearchInput from "../SearchInput/index.js";
+import ResultList from "../ResultList/index.js";
+import { useReducer } from "react";
+import "./SearchPage.css";
 
-const initialState = []
+const initialState = [];
 
-function reducer(state, action){
-  switch(action.type){
+function reducer(state, action) {
+  switch (action.type) {
     case "RANDOM_SNIPPET":
       return action.payload;
     case "SEARCH_SNIPPET":
       return action.payload;
-    default: 
-      console.log("Nothing changes!")
+    default:
+      console.log("Nothing changes!");
       return state;
   }
 }
 
 export default function Searchpage({ activePage }) {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(reducer, initialState);
   if (activePage === "Searchpage") {
     return (
-      <>
-        <h1>The <s>School</s> Search of Code</h1>
-        <SearchInput dispatch={dispatch}/>
-        <ResultList results={state}/>
-      </>
+      <div className="search-container">
+        <div className="search-header">
+          <h1>
+            The <s>School</s> Search of Code
+          </h1>
+          <SearchInput dispatch={dispatch} />
+        </div>
+        <ResultList results={state} />
+      </div>
     );
   }
   return <></>;

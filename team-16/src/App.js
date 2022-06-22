@@ -2,7 +2,7 @@ import "./App.css";
 
 import { useState, useEffect } from "react";
 import Homepage from "./components/Homepage";
-import Searchpage from "./components/Searchpage";
+import Searchpage from "./components/SearchPage";
 import Navbar from "./components/Navbar";
 
 function App() {
