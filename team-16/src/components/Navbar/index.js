@@ -1,11 +1,17 @@
 import "./index.css";
 
+
+
 export default function Navbar({ setActivePage }) {
   return (
     <nav>
-      {/* <img alt="logo" src="../../../public/soc-logo.png" /> */}
-      <button onClick={() => setActivePage("Homepage")}>Home</button>
-      <button onClick={() => setActivePage("Searchpage")}>Search</button>
+      <div>
+        <img src="soc-logo.png" alt="School of Code Logo" className="logo"></img>
+      </div>
+      <div>
+        <button onClick={() => setActivePage("Homepage")}>Home</button>
+        <button onClick={() => setActivePage("Searchpage")}>Search</button>
+      </div>
     </nav>
   );
 }

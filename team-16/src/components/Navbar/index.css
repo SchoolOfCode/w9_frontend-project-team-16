@@ -9,12 +9,13 @@
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   background-color: var(--main-color);
 }
 
-nav > button {
+nav button {
   border: none;
   border-radius: 10px;
   color: var(--main-text-color);
@@ -27,7 +28,11 @@ nav > button {
   font-weight: bold;
 }
 
-nav > button:hover {
+.logo {
+  width: 50px;
+}
+
+nav button:hover {
   background-color: var(--hightlight-color);
   color: white;
 }
