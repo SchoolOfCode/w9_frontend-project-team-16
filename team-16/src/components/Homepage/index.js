@@ -1,5 +1,6 @@
 import CategoryBar from "../Category Bar";
 import Callapsible from "../Collapsible";
+import "./index.css";
 
 export default function Homepage({
   categories,
