@@ -9,6 +9,7 @@ function App() {
   const categories = ["Array Methods", "React", "General"];
   const [activeCategory, setActiveCategory] = useState("Array Methods");
   const [activePage, setActivePage] = useState("Homepage");
+
   const [resourceLinks, setResourceLinks] = useState([]);
 
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
         handleToggle={handleToggle}
         activeContent={activeContent}
         activePage={activePage}
+        activeCategory={activeCategory}
       />
       <Searchpage activePage={activePage} />
     </>
