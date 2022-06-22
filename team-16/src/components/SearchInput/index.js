@@ -56,10 +56,10 @@ export default function SearchInput({ dispatch }) {
         id="search-bar"
       ></input>
       <br />
-      <button onClick={handleSearch} className="search-btn">
+      <button onClick={handleSearch} className="search-btn" name="searchButton">
         Search
       </button>
-      <button onClick={handleRandom} className="search-btn">
+      <button onClick={handleRandom} className="search-btn" name="randomButton">
         Random
       </button>
     </React.Fragment>
