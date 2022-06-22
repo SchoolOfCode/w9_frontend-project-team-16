@@ -20,35 +20,48 @@ Make a specific call for Search, using text input(state) and search button
     Add function to onClick of search button
 */
 
-import React, {useState} from 'react'; 
+import React, { useState } from "react";
+import "./SearchInput.css";
 
-export default function SearchInput({dispatch}) {
-    const [Text, setText] = useState("");
-    function updateText(event){
-        setText(event.target.value);
-        console.log(Text);
-    };
+export default function SearchInput({ dispatch }) {
+  const [Text, setText] = useState("");
+  function updateText(event) {
+    setText(event.target.value);
+    console.log(Text);
+  }
 
-    async function handleRandom(){
-        //Make a random number
-        const searchID = Math.floor((Math.random() * 6) + 1)
-        //Pass in Random Number to get random snippet
-        const response = await fetch(`http://localhost:5001/snippets/${searchID}`);
-        const responseJSON = await response.json();
-        dispatch({type: "RANDOM_SNIPPET", payload: responseJSON.payload});
-    }
+  async function handleRandom() {
+    //Make a random number
+    const searchID = Math.floor(Math.random() * 6 + 1);
+    //Pass in Random Number to get random snippet
+    const response = await fetch(`http://localhost:5001/snippets/${searchID}`);
+    const responseJSON = await response.json();
+    dispatch({ type: "RANDOM_SNIPPET", payload: responseJSON.payload });
+  }
 
-    async function handleSearch(){
-        const response = await fetch(`http://localhost:5001/snippets?category=${Text}`);
-        const responseJSON = await response.json();
-        dispatch({type: "SEARCH_SNIPPET", payload: responseJSON.payload});
-    }
+  async function handleSearch() {
+    const response = await fetch(
+      `http://localhost:5001/snippets?category=${Text}`
+    );
+    const responseJSON = await response.json();
+    dispatch({ type: "SEARCH_SNIPPET", payload: responseJSON.payload });
+  }
 
-    return(
-        <React.Fragment>
-            <button onClick={handleSearch}>Search</button>
-            <button onClick={handleRandom}>Random</button>
-            <input type='text' placeholder='Search by Category' onChange={updateText}></input>
-        </React.Fragment>
-    )
+  return (
+    <React.Fragment>
+      <input
+        type="text"
+        placeholder="Search by Category"
+        onChange={updateText}
+        id="search-bar"
+      ></input>
+      <br />
+      <button onClick={handleSearch} className="search-btn">
+        Search
+      </button>
+      <button onClick={handleRandom} className="search-btn">
+        Random
+      </button>
+    </React.Fragment>
+  );
 }
