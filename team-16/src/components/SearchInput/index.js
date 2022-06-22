@@ -23,6 +23,8 @@ Make a specific call for Search, using text input(state) and search button
 import React, { useState } from "react";
 import "./SearchInput.css";
 
+const snippetsURL = "http://localhost:5001/snippets";
+
 export default function SearchInput({ dispatch }) {
   const [Text, setText] = useState("");
   function updateText(event) {
@@ -34,14 +36,14 @@ export default function SearchInput({ dispatch }) {
     //Make a random number
     const searchID = Math.floor(Math.random() * 6 + 1);
     //Pass in Random Number to get random snippet
-    const response = await fetch(`http://localhost:5001/snippets/${searchID}`);
+    const response = await fetch(`${snippetsURL}/${searchID}`);
     const responseJSON = await response.json();
     dispatch({ type: "RANDOM_SNIPPET", payload: responseJSON.payload });
   }
 
   async function handleSearch() {
     const response = await fetch(
-      `http://localhost:5001/snippets?category=${Text}`
+      `${snippetsURL}?category=${Text}`
     );
     const responseJSON = await response.json();
     dispatch({ type: "SEARCH_SNIPPET", payload: responseJSON.payload });
