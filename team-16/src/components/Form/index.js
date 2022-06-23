@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./form.css";
 
 //POST to links URL
 const linksURL = `http://localhost:5001/links`;
@@ -32,8 +33,8 @@ export default function Form({ setFormReturn, categories }) {
   //Make the POST request
   async function postLink(event) {
     event.preventDefault();
-    if(Category === "" || Link === "" || Description === "" || Name === ""){
-      alert("Please fill in all form fields!")
+    if (Category === "" || Link === "" || Description === "" || Name === "") {
+      alert("Please fill in all form fields!");
       return;
     }
     const postBody = {
@@ -67,52 +68,54 @@ export default function Form({ setFormReturn, categories }) {
   }
 
   return (
-    <form>
-      <label htmlFor="category-input">
-        Select a category or type a new one:{" "}
-      </label>
-      <input
-        id="category-input"
-        type="text"
-        placeholder="Category"
-        list="links-category"
-        required
-        onChange={handleCategoryInput}
-        value={Category || ""}
-      />
-      <datalist id="links-category">
-        {categories.map((category, index) => {
-          return <option key={index}>{category}</option>
-        })}
-      </datalist>
-      <label htmlFor="link-input">Insert the URL(including http://): </label>
-      <input
-        id="link-input"
-        type="text"
-        placeholder="URL"
-        required
-        value={Link || ""}
-        onChange={handleLinkInput}
-      />
-      <label htmlFor="description-input">Insert a description: </label>
-      <input
-        id="description-input"
-        type="text"
-        placeholder="Description"
-        required
-        value={Description || ""}
-        onChange={handleDescriptionInput}
-      />
-      <label htmlFor="name-input">Insert your name: </label>
-      <input
-        id="name-input"
-        type="text"
-        placeholder="Name"
-        value={Name || ""}
-        required
-        onChange={handleNameInput}
-      />
-      <button onClick={postLink}>Submit</button>
-    </form>
+    <div className="form-container">
+      <form>
+        <label htmlFor="category-input">
+          Select a category or type a new one{" "}
+        </label>
+        <input
+          id="category-input"
+          type="text"
+          placeholder="Category"
+          list="links-category"
+          required
+          onChange={handleCategoryInput}
+          value={Category || ""}
+        />
+        <datalist id="links-category">
+          {categories.map((category, index) => {
+            return <option key={index}>{category}</option>;
+          })}
+        </datalist>
+        <label htmlFor="link-input">URL </label>
+        <input
+          id="link-input"
+          type="text"
+          placeholder="including http://"
+          required
+          value={Link || ""}
+          onChange={handleLinkInput}
+        />
+        <label htmlFor="description-input">Description </label>
+        <input
+          id="description-input"
+          type="text"
+          placeholder="Description"
+          required
+          value={Description || ""}
+          onChange={handleDescriptionInput}
+        />
+        <label htmlFor="name-input">Name </label>
+        <input
+          id="name-input"
+          type="text"
+          placeholder="Name"
+          value={Name || ""}
+          required
+          onChange={handleNameInput}
+        />
+        <button onClick={postLink}>Submit</button>
+      </form>
+    </div>
   );
 }

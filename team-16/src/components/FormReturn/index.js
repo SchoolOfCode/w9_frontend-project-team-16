@@ -1,14 +1,17 @@
+import "./index.css";
+
 export default function FormReturn({ FormReturnData }) {
   if (FormReturnData.length === 0) {
     return <></>;
   }
 
   return (
-    <div>
+    <div className="submit-container">
       <div>
-        <h4>Last link submitted:</h4>
+        <h4 className="submit-text">Last link submitted</h4>
       </div>
-      <div>
+
+      <div className="form-return">
         <a
           target="blank"
           href={FormReturnData[0].link}

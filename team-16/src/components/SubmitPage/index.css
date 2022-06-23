@@ -7,19 +7,16 @@
   --hover-color: #79cbdc;
 }
 
-.home-container {
-  flex: 1;
+.header {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
-}
-
-.header {
-  margin: 2rem 0 5rem 0;
-  text-align: center;
+  align-items: center;
 }
 
 .header > h1 {
   font-size: 4rem;
+  text-align: center;
 }
 
 .header > p {
@@ -28,12 +25,10 @@
   line-height: 2rem;
 }
 
-@media screen and (max-width: 600px) {
-  .header {
-    margin: 0 1rem 2rem 0;
-  }
-
-  .header > h1 {
-    font-size: 3rem;
-  }
+.form {
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-color);
+  padding: 2rem 0 2rem 0;
+  color: var(--bg-color);
 }

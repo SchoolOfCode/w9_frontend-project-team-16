@@ -1,5 +1,6 @@
 import Form from "../Form";
 import FormReturn from "../FormReturn";
+import "./index.css";
 
 export default function Submitpage({
   activePage,
@@ -9,13 +10,18 @@ export default function Submitpage({
 }) {
   if (activePage === "Submitpage") {
     return (
-      <div>
-        <div>
-          <h1>School of Code Link Submission Page</h1>
+      <div className="header-container">
+        <div className="header">
+          <h1>
+            School of Code Link <br></br> Submission Page
+          </h1>
           <p>Fill out the form below to add a helpful link to the home page.</p>
         </div>
-        <Form setFormReturn={setFormReturnData} categories={categories} />
-        <FormReturn FormReturnData={FormReturnData} />
+
+        <div className="form">
+          <Form setFormReturn={setFormReturnData} categories={categories} />
+          <FormReturn FormReturnData={FormReturnData} />
+        </div>
       </div>
     );
   }
