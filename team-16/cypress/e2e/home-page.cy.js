@@ -72,6 +72,7 @@ describe("Typical user journey through our website", () => {
     cy.get("#name-input").type("Team 16").should("have.value", "Team 16");
   });
 
+  /*This currently posts to the database (i think) and we need to delete it*/
   it("Click the submit button, check Category input is clear and FormResult is visible", () => {
     cy.get("form > button").click();
     cy.get("#category-input").should("have.value", "");
