@@ -61,7 +61,11 @@ export default function SearchInput({ dispatch }) {
       <button onClick={handleSearch} className="search-btn" name="searchButton">
         Search
       </button>
-      <button onClick={handleRandom} className="search-btn" name="randomButton">
+      <button
+        onClick={handleRandom}
+        className="search-btn random-btn"
+        name="randomButton"
+      >
         Random
       </button>
     </React.Fragment>
