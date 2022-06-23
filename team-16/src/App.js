@@ -30,16 +30,16 @@ function App() {
       //Create Categories from response data and pass it to the categories State
       const payloadArray = responseJSON.payload;
       let categoryArray = [];
-      console.log(payloadArray);
+      //console.log(payloadArray);
       for (let i = 0; i < payloadArray.length; i++) {
-        console.log(payloadArray[i].category);
+        //console.log(payloadArray[i].category);
         if (categoryArray.includes(payloadArray[i].category)) {
           categoryArray = categoryArray;
         } else {
           categoryArray.push(payloadArray[i].category);
         }
         setCategories(categoryArray);
-        console.log(categories);
+        //console.log(categories);
       }
     }
     fetchData();
