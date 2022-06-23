@@ -5,6 +5,7 @@ export default function Submitpage({
   activePage,
   FormReturnData,
   setFormReturnData,
+  categories,
 }) {
   if (activePage === "Submitpage") {
     return (
@@ -13,7 +14,7 @@ export default function Submitpage({
           <h1>School of Code Link Submission Page</h1>
           <p>Fill out the form below to add a helpful link to the home page.</p>
         </div>
-        <Form setFormReturn={setFormReturnData} />
+        <Form setFormReturn={setFormReturnData} categories={categories} />
         <FormReturn FormReturnData={FormReturnData} />
       </div>
     );

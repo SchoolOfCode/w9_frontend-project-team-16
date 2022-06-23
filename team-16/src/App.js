@@ -71,6 +71,7 @@ function App() {
         activePage={activePage}
         FormReturnData={FormReturnData}
         setFormReturnData={setFormReturnData}
+        categories={categories}
       />
     </>
   );

@@ -3,7 +3,7 @@ import { useState } from "react";
 //POST to links URL
 const linksURL = `http://localhost:5001/links`;
 
-export default function Form({ setFormReturn }) {
+export default function Form({ setFormReturn, categories }) {
   //Category state
   const [Category, setCategory] = useState("");
   function handleCategoryInput(event) {
@@ -30,7 +30,12 @@ export default function Form({ setFormReturn }) {
   }
 
   //Make the POST request
-  async function postLink() {
+  async function postLink(event) {
+    event.preventDefault();
+    if(Category === "" || Link === "" || Description === "" || Name === ""){
+      alert("Please fill in all form fields!")
+      return;
+    }
     const postBody = {
       category: Category,
       link: Link,
@@ -62,7 +67,7 @@ export default function Form({ setFormReturn }) {
   }
 
   return (
-    <div>
+    <form>
       <label htmlFor="category-input">
         Select a category or type a new one:{" "}
       </label>
@@ -76,10 +81,9 @@ export default function Form({ setFormReturn }) {
         value={Category || ""}
       />
       <datalist id="links-category">
-        {/* Change this to map through categories state. Needs taken in as a prop */}
-        <option>Array Methods</option>
-        <option>React</option>
-        <option>General</option>
+        {categories.map((category, index) => {
+          return <option key={index}>{category}</option>
+        })}
       </datalist>
       <label htmlFor="link-input">Insert the URL(including http://): </label>
       <input
@@ -109,6 +113,6 @@ export default function Form({ setFormReturn }) {
         onChange={handleNameInput}
       />
       <button onClick={postLink}>Submit</button>
-    </div>
+    </form>
   );
 }
