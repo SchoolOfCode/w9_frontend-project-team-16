@@ -1,10 +1,11 @@
 import Form from "../Form";
-import FormReturn from '../FormReturn';
-import { useState } from 'react';
+import FormReturn from "../FormReturn";
 
-export default function Submitpage({ activePage }) {
-  const [FormReturn, setFormReturn] = useState([])
-
+export default function Submitpage({
+  activePage,
+  FormReturnData,
+  setFormReturnData,
+}) {
   if (activePage === "Submitpage") {
     return (
       <div>
@@ -12,8 +13,8 @@ export default function Submitpage({ activePage }) {
           <h1>School of Code Link Submission Page</h1>
           <p>Fill out the form below to add a helpful link to the home page.</p>
         </div>
-        <Form setFormReturn={setFormReturn}/>
-        {/* <FormReturn /> */}
+        <Form setFormReturn={setFormReturnData} />
+        <FormReturn FormReturnData={FormReturnData} />
       </div>
     );
   }

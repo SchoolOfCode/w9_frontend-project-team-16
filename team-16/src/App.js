@@ -22,6 +22,8 @@ function App() {
 
   const [resourceLinks, setResourceLinks] = useState([]);
 
+  const [FormReturnData, setFormReturnData] = useState([]);
+
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(linksURL);
@@ -43,7 +45,7 @@ function App() {
       }
     }
     fetchData();
-  }, []);
+  }, [FormReturnData]);
 
   const handleToggle = (category) => {
     console.log(category);
@@ -65,7 +67,11 @@ function App() {
         activeCategory={activeCategory}
       />
       <Searchpage activePage={activePage} />
-      <Submitpage activePage={activePage} />
+      <Submitpage
+        activePage={activePage}
+        FormReturnData={FormReturnData}
+        setFormReturnData={setFormReturnData}
+      />
     </>
   );
 }

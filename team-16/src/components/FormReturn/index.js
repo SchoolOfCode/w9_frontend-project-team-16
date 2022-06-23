@@ -1,12 +1,20 @@
-export default function FormReturn () {
-    return (
+export default function FormReturn({ FormReturnData }) {
+  if (FormReturnData.length === 0) {
+    return <></>;
+  }
+
+  return (
     <div>
-        <a target="blank" href="http://www.google.com" key="www.google.com">
-          <p>"Google search engine"</p>
-          <p>{`⭐️ Contributor: Andy Johnson`}</p>
-        </a>
+      <a
+        target="blank"
+        href={FormReturnData[0].link}
+        key={FormReturnData[0].link_id}
+      >
+        <p className="description">{FormReturnData[0].description}</p>
+        <p className="contributor">{`⭐️ Contributor: ${FormReturnData[0].contributor}`}</p>
+      </a>
     </div>
-    )
+  );
 }
 
 /*
