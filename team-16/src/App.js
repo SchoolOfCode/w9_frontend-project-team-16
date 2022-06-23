@@ -3,9 +3,10 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Homepage from "./components/Homepage";
 import Searchpage from "./components/SearchPage";
+import Submitpage from "./components/SubmitPage";
 import Navbar from "./components/Navbar";
 
-const linksURL = `http://localhost:5001/links`
+const linksURL = `http://localhost:5001/links`;
 
 function App() {
   /*
@@ -14,12 +15,14 @@ function App() {
   Check if category already exists in the array
   If not, immutably update the array with the category
   */
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState([]);
   //const categories = ["Array Methods", "React", "General", "Test"];
   const [activeCategory, setActiveCategory] = useState("Array Methods");
   const [activePage, setActivePage] = useState("Homepage");
 
   const [resourceLinks, setResourceLinks] = useState([]);
+
+  const [FormReturnData, setFormReturnData] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -28,21 +31,21 @@ function App() {
       setResourceLinks(responseJSON.payload);
       //Create Categories from response data and pass it to the categories State
       const payloadArray = responseJSON.payload;
-      let categoryArray = []
-      console.log(payloadArray);
-      for(let i= 0; i < payloadArray.length; i++){
-        console.log(payloadArray[i].category);
-        if(categoryArray.includes(payloadArray[i].category)){
+      let categoryArray = [];
+      //console.log(payloadArray);
+      for (let i = 0; i < payloadArray.length; i++) {
+        //console.log(payloadArray[i].category);
+        if (categoryArray.includes(payloadArray[i].category)) {
           categoryArray = categoryArray;
-        } else{
+        } else {
           categoryArray.push(payloadArray[i].category);
         }
-        setCategories(categoryArray)
-        console.log(categories);
+        setCategories(categoryArray);
+        //console.log(categories);
       }
     }
     fetchData();
-  }, []);
+  }, [FormReturnData]);
 
   const handleToggle = (category) => {
     console.log(category);
@@ -64,6 +67,12 @@ function App() {
         activeCategory={activeCategory}
       />
       <Searchpage activePage={activePage} />
+      <Submitpage
+        activePage={activePage}
+        FormReturnData={FormReturnData}
+        setFormReturnData={setFormReturnData}
+        categories={categories}
+      />
     </>
   );
 }
