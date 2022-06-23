@@ -5,14 +5,19 @@ export default function FormReturn({ FormReturnData }) {
 
   return (
     <div>
-      <a
-        target="blank"
-        href={FormReturnData[0].link}
-        key={FormReturnData[0].link_id}
-      >
-        <p className="description">{FormReturnData[0].description}</p>
-        <p className="contributor">{`⭐️ Contributor: ${FormReturnData[0].contributor}`}</p>
-      </a>
+      <div>
+        <h4>Last link submitted:</h4>
+      </div>
+      <div>
+        <a
+          target="blank"
+          href={FormReturnData[0].link}
+          key={FormReturnData[0].link_id}
+        >
+          <p className="description">{FormReturnData[0].description}</p>
+          <p className="contributor">{`⭐️ Contributor: ${FormReturnData[0].contributor}`}</p>
+        </a>
+      </div>
     </div>
   );
 }
