@@ -28,7 +28,7 @@
   background-color: var(--main-color);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 828px) {
   .category-btn {
     display: block;
     width: 100%;
