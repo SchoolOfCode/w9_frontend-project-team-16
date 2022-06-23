@@ -48,12 +48,15 @@ describe("Typical user journey through our website", () => {
   });
 
   it("Select the category form input, type in react and check it is updated", () => {
-    cy.get("#category-input").type("react").should("have.value", "react");
-    /*.clear()
-      .trigger("mouseover")
-      .click();
-    cy.contains("RESTful API Resources").click({ force: true });
-    cy.get("#category-input").should("have.value", "RESTful API Resources");*/
+    cy.get("#category-input").type("react").should("have.value", "react")
+      .clear()
+      .click()
+    cy.get("#links-category option")
+      .first()
+      .should('have.text', 'Array Methods')
+    cy.get("#category-input")
+      .type("testCat")
+      .should("have.value", "testCat");
   });
 
   it("Select the link form input, type in google URL and check it is updated", () => {
@@ -78,4 +81,22 @@ describe("Typical user journey through our website", () => {
     cy.get("#category-input").should("have.value", "");
     cy.get(".description").should("be.visible");
   });
+
+  it("Clicks on Home button and checks if new category is visible ", () => {
+    cy.get('nav > :nth-child(2) > :nth-child(1)').click()
+    cy.contains('testCat').should("be.visible");
+  })
+  
+  it("Clicks on testCat button and checks if new link is visible ", () => {
+    cy.contains('testCat').click()
+    cy.contains('Google search engine').should('be.visible');
+  })
+
+  it("Visits our delete route on the backend to delete testCat and revisits Localhost:3000 to ensure deletion", () => {
+    cy.request('DELETE', 'http://localhost:5001/links').as('deleteLinks')
+    cy.wait(5000);
+    cy.visit("http://localhost:3000")
+    cy.wait(1000);
+    cy.contains('testCat').should('not.exist');
+  })
 });
