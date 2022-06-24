@@ -15,8 +15,9 @@ export default function Homepage({
         <div className="header">
           <h1>School of Code Revision</h1>
           <p>
-            View the links below to external resources, submit your own links or
-            switch over to the "search" tab to find some specific code snippets.
+            View the links below to external resources, submit your own links{" "}
+            <br></br>or switch over to the "search" tab to find some specific
+            code snippets.
           </p>
         </div>
         {/* <Navbar /> */}

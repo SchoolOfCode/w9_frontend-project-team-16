@@ -13,9 +13,7 @@ export default function Navbar({ setActivePage }) {
       <div>
         <button onClick={() => setActivePage("Homepage")}>Home</button>
         <button onClick={() => setActivePage("Searchpage")}>Search</button>
-        <button onClick={() => setActivePage("Submitpage")}>
-          Submit a Link
-        </button>
+        <button onClick={() => setActivePage("Submitpage")}>Submit</button>
       </div>
     </nav>
   );
