@@ -42,15 +42,13 @@ export default function SearchInput({ dispatch }) {
   }
 
   async function handleSearch() {
-    const response = await fetch(
-      `${snippetsURL}?category=${Text}`
-    );
+    const response = await fetch(`${snippetsURL}?category=${Text}`);
     const responseJSON = await response.json();
     dispatch({ type: "SEARCH_SNIPPET", payload: responseJSON.payload });
   }
 
   return (
-    <React.Fragment>
+    <div>
       <input
         type="text"
         placeholder="Search by Category"
@@ -68,6 +66,6 @@ export default function SearchInput({ dispatch }) {
       >
         Random
       </button>
-    </React.Fragment>
+    </div>
   );
 }
