@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import CategoryBar from "../Category Bar";
-import Callapsible from "../Collapsible";
+import Collapsible from "../Collapsible";
 import "./index.css";
 
 export default function Homepage({
@@ -8,13 +8,11 @@ export default function Homepage({
   setCategories,
   activeCategory,
   setActiveCategory,
-  FormReturnData,
 }) {
   const [resourceLinks, setResourceLinks] = useState([]);
 
-  const linksURL = `http://localhost:5001/links`;
-
   useEffect(() => {
+    const linksURL = `http://localhost:5001/links`;
     async function fetchData() {
       const response = await fetch(linksURL);
       const responseJSON = await response.json();
@@ -32,7 +30,7 @@ export default function Homepage({
       }
     }
     fetchData();
-  }, [FormReturnData]);
+  });
 
   const handleToggle = (category) => {
     console.log(category);
@@ -53,13 +51,12 @@ export default function Homepage({
           snippets.
         </p>
       </div>
-      {/* <Navbar /> */}
       <CategoryBar
         categories={categories}
         activeCategory={activeCategory}
         handleToggle={handleToggle}
       />
-      <Callapsible resourceLinks={activeContent} />
+      <Collapsible activeContent={activeContent} />
     </div>
   );
 }

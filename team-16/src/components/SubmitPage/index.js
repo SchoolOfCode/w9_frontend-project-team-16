@@ -3,7 +3,7 @@ import FormReturn from "../FormReturn";
 import "./index.css";
 
 export default function Submitpage({
-  FormReturnData,
+  formReturnData,
   setFormReturnData,
   categories,
 }) {
@@ -18,7 +18,7 @@ export default function Submitpage({
 
       <div className="form">
         <Form setFormReturn={setFormReturnData} categories={categories} />
-        <FormReturn FormReturnData={FormReturnData} />
+        <FormReturn formReturnData={formReturnData} />
       </div>
     </div>
   );

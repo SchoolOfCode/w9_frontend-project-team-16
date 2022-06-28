@@ -8,7 +8,7 @@ function App() {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("Array Methods");
   const [activePage, setActivePage] = useState("Homepage");
-  const [FormReturnData, setFormReturnData] = useState([]);
+  const [formReturnData, setFormReturnData] = useState([]);
 
   return (
     <>
@@ -19,13 +19,13 @@ function App() {
           setCategories={setCategories}
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
-          FormReturnData={FormReturnData}
+          FormReturnData={formReturnData}
         />
       ) : null}
       {activePage === "Searchpage" ? <Searchpage /> : null}
       {activePage === "Submitpage" ? (
         <Submitpage
-          FormReturnData={FormReturnData}
+          formReturnData={formReturnData}
           setFormReturnData={setFormReturnData}
           categories={categories}
         />
