@@ -1,22 +1,35 @@
-# National Bootcamp - Week Nine Project Brief
+# <img src="./team-16/public/soc-logo.png" width="50" >  Revision App <img src="./team-16/public/soc-logo.png" width="50" >
 
-For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
+For this project...
 
-To do this, you’ll need to take the time to understand your user (a bootcamper), their experiences, and their problems. Specifically, it might be good to focus on how to enhance the remote experience of a bootcamper, or what can help them with the vast amount of learning there is to do as a new developer. What do they need? What problem might they have that your application could solve for them? How can you get into the mindset of your user and keep them at the centre of your problem-solving?
+- Project logo. (SoC logo)✅
 
-The high level outcomes from this project should be:
+- TOC for easy navigation✅
 
-- A minimum viable product (MVP) showcasing an innovative full stack application which meets the user need you’ve identified
-- A presentation, complete with how you worked as a team and a demonstration of the project
+## Table of contents
 
-Your project application might include the following:
+1. [Demo Screenshot](#demoscreenshot)
+2. [Project Description](#projectdescription)
+3. [Credits](#credits)
 
-- Include a user experience created in React
-- Build a REST API which is used by your front-end
-- Be supported by a Postgresql database with multiple tables
-- Be built and managed in an agile way
-- Utilise testing for ensuring robust code
+## Demo screenshot
 
-Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
+## Project description
 
-Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
+This revision app provides:
+
+- A page with useful resource links, organised by category
+- A page to search code snippets, either by category or random
+- A page to contribute your own resource link
+
+How to install guide?
+
+## Credits
+
+Our names, thanks to those who provided feedback? SoC as a whole
+This app was developed by:
+[Andy Johnson](https://github.com/multi-vit), [Jessy Yeh](https://github.com/Jessy-Yeh), [Josh Pattison](https://github.com/pattisoj) and [Nathan Lee](https://github.com/N-LEE-94)
+
+Special thanks to:
+[Adam Phasey](https://github.com/AdamPhasey), [Claudia Gonzalez-Casales](https://github.com/ClaudiaGC1339), [Skandy](https://github.com/skandog) and [Steven Cheung](https://github.com/StevenCK1) for their insightful code reviews.
+And to School of Code
