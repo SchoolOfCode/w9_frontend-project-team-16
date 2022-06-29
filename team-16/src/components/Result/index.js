@@ -1,5 +1,5 @@
 import React from "react";
-import "./result.css";
+import "./Result.css";
 
 export default function Result({ category, description, snippet }) {
   return (

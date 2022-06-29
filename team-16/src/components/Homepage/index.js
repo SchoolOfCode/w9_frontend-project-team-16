@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import CategoryBar from "../Category Bar";
+import CategoryBar from "../CategoryBar";
 import Collapsible from "../Collapsible";
 import "./homepage.css";
 
