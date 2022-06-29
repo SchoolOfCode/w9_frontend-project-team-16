@@ -33,7 +33,7 @@ On the Friday we had the pleasure of presenting and showcasing our app to indust
 
 ## For Developers
 
-Looking for development specific docs? Click [here](w9_frontend-project-team-16/developer-README.md).
+Looking for development specific docs? Click [here](https://github.com/SchoolOfCode/w9_frontend-project-team-16/blob/main/developer-README.md).
 
 ## Credits
 
