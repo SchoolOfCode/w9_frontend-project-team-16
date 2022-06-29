@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SearchInput.css";
+import "./searchInput.css";
 
 const snippetsURL = "http://localhost:5001/snippets";
 const randomNumber = 6;

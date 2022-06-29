@@ -1,6 +1,6 @@
-import "./index.css";
+import "./submissionResult.css";
 
-export default function FormReturn({ formReturnData }) {
+export default function SubmissionResult({ formReturnData }) {
   if (formReturnData.length === 0) {
     return <></>;
   }

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./form.css";
+import "./submissionForm.css";
 
 const linksURL = `http://localhost:5001/links`;
 
-export default function Form({ setFormReturn, categories }) {
+export default function SubmissionForm({ setFormReturn, categories }) {
   const [Category, setCategory] = useState("");
   function handleCategoryInput(event) {
     setCategory(event.target.value);

@@ -1,4 +1,4 @@
-import "./index.css";
+import "./collapsible.css";
 
 export default function Collapsible({ activeContent }) {
   return (

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CategoryBar from "../Category Bar";
 import Collapsible from "../Collapsible";
-import "./index.css";
+import "./homepage.css";
 
 export default function Homepage({
   categories,

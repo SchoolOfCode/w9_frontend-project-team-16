@@ -1,5 +1,5 @@
 import Result from "../Result";
-import "./index.css";
+import "./resultList.css";
 
 export default function ResultList({ results }) {
   return (
