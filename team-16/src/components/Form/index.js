@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./form.css";
 
-const linksURL = `http://localhost:5001/links`;
+const linksURL = `https://revision-app-backend.herokuapp.com/links`;
 
 export default function Form({ setFormReturn, categories }) {
   const [Category, setCategory] = useState("");

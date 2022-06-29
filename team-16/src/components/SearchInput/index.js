@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SearchInput.css";
 
-const snippetsURL = "http://localhost:5001/snippets";
+const snippetsURL = "https://revision-app-backend.herokuapp.com/snippets";
 const randomNumber = 6;
 
 export default function SearchInput({ dispatch }) {

@@ -12,7 +12,7 @@ export default function Homepage({
   const [resourceLinks, setResourceLinks] = useState([]);
 
   useEffect(() => {
-    const linksURL = `http://localhost:5001/links`;
+    const linksURL = `https://revision-app-backend.herokuapp.com/links`;
     async function fetchData() {
       const response = await fetch(linksURL);
       const responseJSON = await response.json();
