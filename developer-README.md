@@ -41,13 +41,13 @@ npm start
 This is set to run on localhost:3000.
 
 #### Notice -
-This will **only** start up the front end of this application, to interact with a server and get the full experience of this app you will need to head over to our [backend repository](https://github.com/SchoolOfCode/w9_backend-project-team-16).==
+This will **only** start up the front end of this application, to interact with a server and get the full experience of this app you will need to head over to our [backend repository](https://github.com/SchoolOfCode/w9_backend-project-team-16).
 
 ## Project Breakdown
 
 ### Component Tree
 
-A markdown of the component tree can be found [here](w9_frontend-project-team-16/component-tree.md).
+A markdown of the component tree can be found [here](https://github.com/SchoolOfCode/w9_frontend-project-team-16/blob/main/component-tree.md).
 
 ![Graphical representation of the component tree](./component-tree.png)
 
