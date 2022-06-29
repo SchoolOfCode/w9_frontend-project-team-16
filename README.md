@@ -10,20 +10,22 @@
 4. [Credits](#credits)
 
 ## Demonstration
+
 ![Gif demonstrating the app](./demo-screenshot.gif)
+
 ## Project Description
 
-As a team of four we took time to understand our users (other bootcampers) and what would make their experience as junior developers easier. Our user research told us that a great way to help was with a revision app, so this is what we created. 
+As a team of four we took time to understand our users (other bootcampers) and what would make their experience as junior developers easier. Our user research told us that a great way to help was with a revision app, so this is what we created.
 
-The current repository is the accumulation of our efforts for the week. 
+The current repository is the accumulation of our efforts for the week.
 
 **We coded for only three days during the project.**
 
-On the Monday we sorted our team manifestos, how we were going to make decisions, understanding the brief and creating user personas, user journeys and wire-frames for our app. 
+On the Monday we sorted our team manifestos, how we were going to make decisions, understanding the brief and creating user personas, user journeys and wire-frames for our app.
 
 On the Friday we had the pleasure of presenting and showcasing our app to industry professionals.
 
-#### This revision app provides:
+### This revision app provides:
 
 - A home page with a bank of useful resource links, organised by category.
 - A page to search for code snippets, either by category or randomly.
