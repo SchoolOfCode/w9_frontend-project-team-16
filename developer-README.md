@@ -5,11 +5,11 @@ This document is intended for developers; it contains information regarding inst
 ## Table of Contents
 
 1. [Installation](#installation)
-2. [Project Breakdown](#projectbreakdown)
-    1. [Component Tree](#componenttree)
-    2. [CRUD routes](#crudroutes)
+2. [Project Breakdown](#project-breakdown)
+    1. [Component Tree](#component-tree)
+    2. [CRUD routes](#crud-routes)
     3. [Testing](#testing)
-    4. [Tech Stack](#techstack)
+    4. [Tech Stack](#tech-stack)
 3. [Credits](#credits)
 
 ## Installation
@@ -40,8 +40,15 @@ npm start
 
 This is set to run on localhost:3000.
 
-#### Notice -
-This will **only** start up the front end of this application, to interact with a server and get the full experience of this app you will need to head over to our [backend repository](https://github.com/SchoolOfCode/w9_backend-project-team-16).
+#### Deployment Notice -
+This will start up the front end of this application, it will interact with our API and make calls to the following URLS:
+
+- For the 'links' on our homepage - https://revision-app-backend.herokuapp.com/links
+- For the 'code snippets' on the search page - https://revision-app-backend.herokuapp.com/snippets
+
+This API is deployed on and hosted by Heroku. 
+
+To see how we have set up our API view the [backend repository](https://github.com/SchoolOfCode/w9_backend-project-team-16).
 
 ## Project Breakdown
 
