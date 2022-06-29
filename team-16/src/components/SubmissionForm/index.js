@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./form.css";
+import "./submissionForm.css";
 
 const linksURL = `https://revision-app-backend.herokuapp.com/links`;
 
-export default function Form({ setFormReturn, categories }) {
+export default function SubmissionForm({ setFormReturn, categories }) {
   const [Category, setCategory] = useState("");
   function handleCategoryInput(event) {
     setCategory(event.target.value);

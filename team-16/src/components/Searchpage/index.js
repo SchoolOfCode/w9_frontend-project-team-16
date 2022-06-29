@@ -1,7 +1,7 @@
 import SearchInput from "../SearchInput/index.js";
 import ResultList from "../ResultList/index.js";
 import { useReducer } from "react";
-import "./SearchPage.css";
+import "./searchPage.css";
 
 const initialState = [];
 

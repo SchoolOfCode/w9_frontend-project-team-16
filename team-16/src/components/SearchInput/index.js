@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SearchInput.css";
+import "./searchInput.css";
 
 const snippetsURL = "https://revision-app-backend.herokuapp.com/snippets";
 const randomNumber = 6;

@@ -1,6 +1,6 @@
-import Form from "../Form";
-import FormReturn from "../FormReturn";
-import "./index.css";
+import SubmissionForm from "../SubmissionForm";
+import SubmissionResult from "../SubmissionResult";
+import "./submitPage.css";
 
 export default function Submitpage({
   formReturnData,
@@ -17,8 +17,11 @@ export default function Submitpage({
       </div>
 
       <div className="form">
-        <Form setFormReturn={setFormReturnData} categories={categories} />
-        <FormReturn formReturnData={formReturnData} />
+        <SubmissionForm
+          setFormReturn={setFormReturnData}
+          categories={categories}
+        />
+        <SubmissionResult formReturnData={formReturnData} />
       </div>
     </div>
   );

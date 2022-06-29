@@ -1,4 +1,4 @@
-import "./index.css";
+import "./navbar.css";
 
 export default function Navbar({ setActivePage }) {
   return (
