@@ -17,7 +17,7 @@ function reducer(state, action) {
   }
 }
 
-export default function Searchpage() {
+export default function SearchPage() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="search-container">

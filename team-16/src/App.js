@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Homepage from "./components/Homepage";
-import Searchpage from "./components/SearchPage";
-import Submitpage from "./components/SubmitPage";
+import SearchPage from "./components/SearchPage";
+import SubmitPage from "./components/SubmitPage";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -22,9 +22,9 @@ function App() {
           FormReturnData={formReturnData}
         />
       ) : null}
-      {activePage === "Searchpage" ? <Searchpage /> : null}
-      {activePage === "Submitpage" ? (
-        <Submitpage
+      {activePage === "SearchPage" ? <SearchPage /> : null}
+      {activePage === "SubmitPage" ? (
+        <SubmitPage
           formReturnData={formReturnData}
           setFormReturnData={setFormReturnData}
           categories={categories}
