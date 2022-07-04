@@ -1,5 +1,5 @@
 [build]
 
-  base = "w9_frontend-project-team-16/team-16/"
+  base = "w9_frontend-project-team-16/"
 
-  publish = "w9_frontend-project-team-16/team-16/build/"
+  publish = "w9_frontend-project-team-16/team-16/"
