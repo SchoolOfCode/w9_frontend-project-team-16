@@ -1,7 +1,7 @@
 import SearchInput from "../SearchInput/index.js";
 import ResultList from "../ResultList/index.js";
 import { useReducer } from "react";
-import "./searchPage.css";
+import "./SearchPage.css";
 
 const initialState = [];
 
@@ -20,8 +20,8 @@ function reducer(state, action) {
 export default function SearchPage() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
-    <div className="search-container">
-      <div className="search-header">
+    <div className='search-container'>
+      <div className='search-header'>
         <h1>
           The <s>School</s> Search of Code
         </h1>
